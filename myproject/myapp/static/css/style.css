@@ -1,0 +1,394 @@
+
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card-title{
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: var(--primary-color-dark);
+ 
+}
+.btn a:hover{
+  background-color:rgb(13, 160, 99);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  padding-left: 500px;
+  padding-top: 20px;
+  gap: 2rem;
+}
+.nm{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nm:hover{
+  color:blue ;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color:#196a54;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.header {
+  padding: 0 1rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+}
+.image__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+}
+
+.image__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image_content_1 {
+  transform: translate(calc(-50% - 12rem), calc(-50% - 8rem));
+}
+
+.image_content_1 span {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #defcf4;
+  border-radius: 100%;
+}
+
+.image_content_1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.image_content_1 p {
+  color: var(--text-light);
+}
+
+.image_content_2 {
+  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image_content_2 ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.image_content_2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.image_content_2 span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+.relief-source{
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  
+}
+.two-cards{
+  display: flex;
+  flex-direction: row;
+}
+.heading{
+  margin: 20px;
+}
+.card{
+  
+  border:4px solid #237760;
+  border-radius: 10px;
+}
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header {
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+}
+.predict-img{
+  border-radius: 5px;
+  margin: 10px;
+}
+.predict-div:hover{
+  border-radius: 20px;
+}
+.predict-div{
+  border:3px solid #074f3c;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  background-color: #b7dad4;
+  box-shadow: 0 0 10px rgba(4, 105, 71, 0.1);
+
+}
+.predict-in{
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.card-text{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.predict-h2{
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.footer {
+  background-color: #28bf96;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.footer-nav li {
+  margin: 0 15px;
+}
+.footer-nav a:hover{
+  color:black;
+}
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.social-icons {
+  margin: 20px 0;
+}
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer-bottom {
+  background-color: #209677;
+  padding: 10px 0;
+}
+.self-text{
+  border:5px solid #209677;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+
+body{
+  background-color: #c7f9ec;;
+}
+.self-text {
+text-align: center;
+padding: 2rem;
+}
+
+.self-text h1 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+
+.self-text p {
+font-size: 1.1rem;
+line-height: 1.5;
+}
+
+/* Styling for the card container */
+.card-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between; /* Distribute cards evenly */
+margin: 0 auto; /* Center the container horizontally */
+width: 80%; /* Set a maximum width for responsiveness */
+}
+
+/* Styling for the cards */
+.card {
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+margin-bottom: 2rem;
+margin: 50px;
+width: 45%; /* Set card width to fit two cards per row */
+transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+transform: scale(1.02);
+cursor: pointer;
+}
+
+.card-body {
+padding: 1.5rem;
+}
+.app-bg{
+
+    background-color: whitesmoke;
+}
+.booking-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 4px solid black;
+  background-color:#209677;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.booking-form h2 {
+  margin-bottom: 30px;
+}
+.message{
+  color: whitesmoke;
+  background-color: green;
+  border: 2px solid black;
+  
+}
+.card-title {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+font-family: 'Times New Roman', serif;
+}
+
+/* Styling for the button */
+.btn-primary {
+background-color: #52a0f4;
+border-color: #007bff;
+transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+background-color: #0069d9;
+}

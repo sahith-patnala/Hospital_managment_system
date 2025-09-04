@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Web Design Mastery | MEDIBuddy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+      .nm {
+        color: green;
+      }
+      .btn a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__logo">MEDIBuddy</div>
+        <ul class="nav__links">
+          <li class="link"><a href="{% url 'contact' %}">Contact Us</a></li>
+          <li class="link"><a href="{% url 'about' %}">About Us</a></li>
+          {% if user.is_authenticated %}
+          <p class="nm">Welcome {{ user.username }} </p>
+       
+          {% endif %}
+        </ul>
+        <div id="account">
+          <!-- <button class="btn" >
+            <a href="{% url 'login' %}">Login</a>
+          </button> -->
+          <button class="btn">
+            <a href="">Logout</a>
+          </button>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="content">
+          <h1><span>Get Quick</span><br />Relief</h1>
+          <p>
+            Welcome to our mental health platform,
+             designed specifically to help individuals who
+              struggle to find accessible and reliable resources.
+               This platform offers comprehensive mental health resources, 
+               intuitive self-assessment tools, and secure virtual sessions. 
+               Explore and find a secure and easy-to-use solution for all your mental health needs.
+          </p>
+          <button class="btn" id="appointmentBtn">
+            <a href="{% url 'appointment' %}">Get Appointment</a>
+          </button>
+          <button class="btn">
+            <a href="{% url 'relief' %}">Get Relief</a>
+          </button>
+        </div>
+        <div class="image">
+          <span class="image__bg"></span>
+          <img src="{% static 'images/header-bg.png' %}" alt="Example Image">
+        </div>
+      </header>
+     
+      <div class="predict-div">
+    
+        <img class="predict-img" src="{% static 'images/self_img.jpg'%}" alt="not available" >
+        <div class="predict-in">
+            <h2 class="predict-h2">Know more about yourself</h2>
+            <p class="card-text">This platform also helps you to
+               explore <br>potential diseases based on your symptoms.<br>
+                It's a starting point for your health journey, 
+                but a doctor's <br>diagnosis and treatment plan remain crucial.
+              <br>
+              <br>
+              Get a prediction  
+          </p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Predict</a>
+        
+        </div>
+      </div>
+      <div class="footer">
+        <ul class="footer-nav">
+            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            <li><a href="{% url 'help' %}">HELP</a></li>
+        </ul>
+        <div class="social-icons">
+          <p>Our platform is built with the support of various 
+            reputable online resources and websites to ensure efficient 
+            and effectiveness.<br> We are committed to providing 
+            high-quality mental health support by leveraging the best tools 
+            and information available.<br> Thank you for trusting us on your journey
+             to better mental health.</p>
+            <a href="saitammu"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="saitammu66@gmail.com"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-bottom">
+            © 2020 Copyright: MDBootstrap.com
+        </div>
+    </div>
+  
+
+       
+      <div class="modal fade" id="notRegisteredModal" tabindex="-1" aria-labelledby="notRegisteredModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="notRegisteredModalLabel">Attention</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              User is not registered
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Font Awesome CDN for social icons  -->
+      <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+      <script>
+        document.getElementById('appointmentBtn').addEventListener('click', function(event) {
+          event.preventDefault();
+          $('#notRegisteredModal').modal('show');
+        });
+
+        document.getElementById('goSomewhereBtn').addEventListener('click', function(event) {
+          event.preventDefault();
+          $('#notRegisteredModal').modal('show');
+        });
+      </script> -->
+    </div>
+  </body>
+</html> 
+<!-- 
+ex -->
+
+
+  
+
+    

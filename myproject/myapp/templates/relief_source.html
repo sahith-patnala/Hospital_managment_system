@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Web Design Mastery | MEDIBuddy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+      .nm {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body >
+    <div class="container">
+        <nav>
+          <div class="nav__logo">MEDIBuddy</div>
+          <ul class="nav__links">
+            <li class="link"><a href="viewpatient.html">Home</a></li>
+            <li class="link"><a href="about.html">About Us</a></li>
+            <!-- 
+            <p class="nm">Welcome username</p>
+            -->
+          </ul>
+        </nav>
+        <div class="relief-source">
+        <div class="card" style="width: 40rem; margin:20px;">
+            <img src="{% static 'images/article.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Get some articles</h5>
+              <p class="card-text">Discover insightful articles on mental health to improve your well-being and stay informed about the latest research and trends in mental health care. Explore our collection for practical tips, expert advice, and inspiring stories.</p>
+              <a href="{% url 'articles' %}" class="btn btn-primary">Click here</a>
+            </div>
+          </div>
+        <div class="card" style="width: 40rem; margin:20px;">
+            <img src="{% static 'images/youtube.jpeg'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Youtube videos</h5>
+              <p class="card-text">Check out these insightful YouTube videos on mental health that provide valuable tips, expert advice, and personal stories to help you understand and improve your well-being. Click below to explore a wide range of content tailored to mental health awareness and support.</p>
+              <a href="{% url 'youtube' %}" class="btn btn-primary">Click here</a>
+            </div>
+          </div>
+        <div class="card" style="width: 40rem; margin:20px;">
+            <img src="{% static 'images/self.png'%}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Self assesment tools</h5>
+              <p class="card-text">Exploring self-assessment tools can provide valuable insights into your mental health. These widely-used questionnaires offer a quick and effective way to gauge your emotional well-being and identify areas where you might need support.</p>
+              <a href="{% url 'self' %}" class="btn btn-primary">Click here</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            color: red;
+            font-weight: bold;
+            background-color: #45a049;
+            border: 2px solid black;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for message in messages %}
+            <div class="message">{{ message }}</div>
+        {% endfor %}
+        <form action="" method="post">{% csrf_token %}
+            <input type="text" name="username" placeholder="Enter username" required><br>
+            <input type="email" name="email" placeholder="Enter email" required><br>
+            <input type="password" name="password1" placeholder="Enter password" required><br>
+            <input type="password" name="password2" placeholder="Confirm password" required><br>
+            <button type="submit">Register</button>
+            <br>
+            <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
